@@ -1,0 +1,38 @@
+!!! 5
+%html{:lang => "en"}
+    %head
+        %meta{:charset => "utf-8"}
+        %title
+        %meta{:name => "description", :content => ""}
+        -# %meta{:name => "keywords", :content => ""}
+        -# %meta{:name => "viewport", :content => "width=device-width; initial-scale=1;"}
+        -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
+        %link{:href => "favicon.ico", :rel => "shortcut icon"}
+        %link{:rel => "stylesheet", :href => "css/base.css"}
+        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 30em)", :href => "css/tablet.css"}
+        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "css/widescreen.css"}
+        -# /[if lt IE 9]
+            %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
+        -# /[if lt IE 9]
+            %link{:rel => "stylesheet", :href => "css/oldie.css"}
+            %link{:rel => "stylesheet", :href => "css/ie8.css"}
+        -# /[if lt IE 8]
+            %link{:rel => "stylesheet", :href => "css/ie7.css"}
+        -# /[if lt IE 7]
+            %link{:rel => "stylesheet", :href => "css/base.css"}
+        -# /[if IE 6]
+            %link{:rel => "stylesheet", :href => "css/ie6.css"}
+    %body
+
+        -# %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+        -# :javascript
+            window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
+
+        %script{:src => "js/plugins.js"}
+        %script{:src => "js/script.js"}
+
+        -# :javascript
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
