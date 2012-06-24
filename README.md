@@ -3,7 +3,7 @@ HAML HTML5 Boilerplate
 
 ### A leaner HAML HTML5 boilerplate for "mobile first" responsive web design
 
-Whilst HTML5 boilerplates are great tools, they can often in the wrong hands result in over bloated HTML5. Ditch the excess boilerplate markup that's there "just in case" and adopt leaner "mobile first" responsive web design.
+Whilst HTML5 boilerplates are great tools, they can sometimes in the wrong hands result in over bloated HTML5. Ditch the excess boilerplate markup that's there "just in case" and adopt leaner "mobile first" responsive web design.
 
 By utilising HAML comments, this boilerplate still includes the kitchen sink "just in case", however, all but the most essentials have been commented out. As a result, it compiles to just:
 
@@ -27,7 +27,7 @@ This should be enough to get started. If you need anything else, just uncomment 
 
 ### Legacy IE and "mobile first"
 
-There are several included options for dealing with legacy IE browsers for "mobile first" design:
+There are several options included for dealing with legacy IE browsers for "mobile first" design:
 
 1. Choose between Paul Irish's `<html>` tag conditional classes hack or the more traditional conditional stylesheets. Paul Irish's hack is disabled by default as it's not always necessary on every site.
 
@@ -37,6 +37,6 @@ There are several included options for dealing with legacy IE browsers for "mobi
 
 #### Credits
 
-- Rachael Andrew's "HTML5 boilerplate" in her excellent article [Stop solving problems you don’t yet have](http://www.rachelandrew.co.uk/archives/2012/03/21/stop-solving-problems-you-dont-yet-have/) was a big infulence behind the default markup this boilerplate compiles to.
+- Rachael Andrew's "HTML5 boilerplate" in her excellent article [Stop solving problems you don’t yet have](http://www.rachelandrew.co.uk/archives/2012/03/21/stop-solving-problems-you-dont-yet-have/) was a big infulence on the default markup this boilerplate compiles to.
 - Whilst you're there, also read [Responsibly Responsive: developing the Greenbelt website](http://www.rachelandrew.co.uk/archives/2012/03/16/responsibly-responsive-developing-the-greenbelt-website/).
 - Jeremy Keith's [dConstruct optimisation](http://adactio.com/journal/5439/) is an excellent starting point for "mobile first" optimisation.
