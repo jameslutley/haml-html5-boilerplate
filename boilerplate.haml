@@ -1,35 +1,143 @@
 !!! 5
-%html{:lang => "en"}
+
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+-# <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+-# <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+-# <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+-# <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+%html.no-js{:lang => "en"}
+
     %head
+
+        -# ==========================================================================
+        -# Head
+        -# ==========================================================================
+
         %meta{:charset => "utf-8"}
+
         %title
         %meta{:name => "description", :content => ""}
         -# %meta{:name => "keywords", :content => ""}
-        -# %meta{:name => "viewport", :content => "width=device-width; initial-scale=1;"}
+        -# %meta{:name => "author", :content => ""}
+
+        -# Mobile
+        -# ==========================================================================
+
+        %meta{:name => "viewport", :content => "width=device-width, initial-scale=1"}
+        -# %meta{:name => "HandheldFriendly", :content => "True"}
+        -# %meta{:name => "MobileOptimized", :content => "320"}
+
+        -# iOS web app
+
+        -# %meta{:name => "apple-mobile-web-app-capable", :content => "yes"}
+        -# %meta{:name => "apple-mobile-web-app-status-bar-style", :content => "black"}
+        -# %link{:rel => "apple-touch-startup-image", :href => "/img/touch/startup.png"}
+
+        -# RSS
+        -# ==========================================================================
+
         -# %link{:rel => "alternate", :type => "application/rss+xml", :title => "RSS", :href => "http://feeds.feedburner.com/FEEDNAME"}
-        %link{:href => "favicon.ico", :rel => "shortcut icon"}
-        %link{:rel => "stylesheet", :href => "css/base.css"}
-        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 30em)", :href => "css/tablet.css"}
-        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "css/widescreen.css"}
-        -# /[if lt IE 9]
-            %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
-        -# /[if lt IE 9]
-            %link{:rel => "stylesheet", :href => "css/oldie.css"}
-            %link{:rel => "stylesheet", :href => "css/ie8.css"}
-        -# /[if lt IE 8]
-            %link{:rel => "stylesheet", :href => "css/ie7.css"}
-        -# /[if lt IE 7]
-            %link{:rel => "stylesheet", :href => "css/base.css"}
-        -# /[if IE 6]
-            %link{:rel => "stylesheet", :href => "css/ie6.css"}
+
+        -# Favicon
+        -# ==========================================================================
+
+        %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+        -# iPad 3 Retina Display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "144x144", :href => "/img/touch/apple-touch-icon-144x144-precomposed.png"}
+
+        -# iPhone 4 Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "114x114", :href => "/img/touch/apple-touch-icon-114x114-precomposed.png"}
+
+        -# iPad non-Retina display
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :sizes => "72x72", :href => "/img/touch/apple-touch-icon-72x72-precomposed.png"}
+
+        -# Non-Retina iPhone, iPod Touch, Android 2.1+
+
+        -# %link{:rel => "apple-touch-icon-precomposed", :href => "/img/touch/apple-touch-icon-57x57-precomposed.png"}
+
+        -# Nokia
+
+        -# %link{:rel => "shortcut icon", :href => "/img/touch/apple-touch-icon.png"}
+
+        -# CSS
+        -# ==========================================================================
+
+        %link{:rel => "stylesheet", :href => "/css/base.css"}
+        -# %link{:rel => "stylesheet", :media => "only screen and (min-width: 45em)", :href => "/css/widescreen.css"}
+
+        -# IE Fixes
+        -# ==========================================================================
+
+        -#
+        -# Use HTML5 Shim polyfill if not using Modernizr
+        -# IE stylesheets for legacy IE "Mobile first" support (using SASS)
+        -# nicolasgallagher.com/mobile-first-css-sass-and-ie/
+        -#
+
+        -# /[if (lt IE 9) & (!IEMobile)]
+            -# %script{:src => "//html5shim.googlecode.com/svn/trunk/html5.js"}
+            %script{:src => "/js/libs/selectivizr.min.js"}
+            -# %link{:rel => "stylesheet", :href => "/css/oldie.css"}
+            -# %link{:rel => "stylesheet", :href => "/css/ie8.css"}
+
+        -# [if (lt IE 8) & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/css/ie7.css"}
+
+        -# [if IE 6 & (!IEMobile)]
+            %link{:rel => "stylesheet", :href => "/css/ie6.css"}
+
+        -# JS
+        -# ==========================================================================
+
+        -#
+        -# Typekit
+        -# Change XXXXXXX to be your site's Typekit Kit ID
+        -#
+
+        -# %script{:src => "http://use.typekit.com/XXXXXXX.js"}
+        -# :javascript
+            try{Typekit.load();}catch(e){}
+
+        -# Modernizr
+
+        -# %script{:src => "/js/libs/modernizr.custom.js"}
+
     %body
+
+        -# ==========================================================================
+        -# Content
+        -# ==========================================================================
+
+        -# = yield
+
+        -# ==========================================================================
+        -# Bottom
+        -# ==========================================================================
+
+        -# JS
+        -# ==========================================================================
+
+        -# jQuery
 
         -# %script{:src => "//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
         -# :javascript
-            window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
+            window.jQuery || document.write('<script src="/js/jquery-1.7.2.min.js"><\/script>')
 
-        %script{:src => "js/plugins.js"}
-        %script{:src => "js/script.js"}
+        -# Custom JS
+
+        -# %script{:src => "/js/app.js"}
+
+        -#
+        -# Asynchronous Google Analytics
+        -# Change UA-XXXXX-X to be your site's ID
+        -# mathiasbynens.be/notes/async-analytics-snippet
+        -#
 
         -# :javascript
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
