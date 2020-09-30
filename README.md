@@ -4,6 +4,7 @@ HAML HTML5 Boilerplate
 ### A leaner HAML HTML5 boilerplate for "mobile first" responsive web design
 
 Whilst HTML5 boilerplates are great tools, they can sometimes in the wrong hands result in over bloated HTML5. Ditch the excess boilerplate markup that's there "just in case" and adopt leaner "mobile first" responsive web design.
+Haml doesn't have both start and end for each element like eRuby. eRuby syntax looks a lot like HTML and is thereby more HTML-like while Haml is more CSS-like. Haml uses indentation to nest tag elements whereas eRuby uses the same HTML representation.
 
 By utilising HAML comments, this boilerplate still includes the kitchen sink "just in case", however, all but the most essentials have been commented out. As a result, it compiles to just:
 
